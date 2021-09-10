@@ -3,12 +3,12 @@ from tkinter.constants import BOTTOM, LEFT, RIGHT
 from tkinter import messagebox
 
 def calculate():
-    single_travel_distance = int(Dist.get())
-    n_ride = int(n_viagens.get())
+    single_travel_distance = float(Dist.get())
+    n_ride = float(n_viagens.get())
     total_distance_traveled = single_travel_distance * n_ride
-    car_efficiency = int(km_L.get())
-    gas_price = int(price_gas.get())
-    calculo = (total_distance_traveled / car_efficiency ) * ( 1 / gas_price)
+    car_efficiency = float(km_L.get())
+    gas_price = float(price_gas.get())
+    calculo = (total_distance_traveled / car_efficiency ) * gas_price
 
     return messagebox.showinfo('message', f'R$ {calculo:.2f}')
 
